@@ -1,0 +1,125 @@
+.content{
+	padding-top: 15px;
+	&__blog{
+		max-width: 100%;
+		height: 500px;
+		background-image: url('../images/bg_img.png');
+		box-shadow: 0px 4px 7.2px 2.8px rgba(0, 0, 0, 0.41);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center top;
+		border-radius: 10px;
+		.main-container {
+			padding: 10px 15px;
+			.carousel .carousel-inner .item {
+				opacity: 0;
+				transition-property: opacity;
+			}
+			.carousel .carousel-inner .active {
+				opacity: .90;
+			}
+			.carousel .carousel-inner .active.left,
+			.carousel .carousel-inner .active.right {
+				left: 0;
+				opacity: 0;
+				z-index: 1;
+			}
+			.carousel .carousel-inner .next.left,
+			.carousel .carousel-inner .prev.right {
+				opacity: .1;
+			}
+			.carousel .carousel-control {
+				z-index: 2;
+			}
+			.carousel .active.left {
+				left:0;
+				opacity:0;
+				transition: opacity  .1s;
+				z-index: 2;
+			}
+			.carousel .next {
+				left:0;
+				opacity: .1;
+				z-index: .1;
+			}
+		}
+		.item{
+			min-height: 480px;
+			height: 100%;
+			width: 100%;
+			.carousel-caption{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 20px;
+				z-index: 0;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				text-align: center;
+				text-shadow: 0;
+				.header__nav{
+					text-align: center;
+					&--an1{
+						animation-delay: 0.5s;
+					}
+					&--an2{
+						animation-delay: 0.7s;
+					}
+					img{
+						width: 580px;
+						height: 420px;
+					}
+					h4{
+						text-align: left;
+						font-size: 31px;
+						color: #2597ee;
+						font-weight: 500;
+						padding-top: 40px;
+						white-space: nowrap;
+					}
+					ul{
+						margin-top: 40px;
+						text-align: left;
+						padding: 0;
+						li{
+							list-style-type: none;
+							font-size: 25px;
+							color: #000;
+							font-weight: 200;
+						}
+					}
+					.btn{
+						outline: none;
+						border-width: 2px;
+						border-color: rgb(11, 217, 161);
+						border-style: solid;
+						width: 157px;
+						height: 35px;
+						font-size: 20px;
+						color: #000;
+						font-weight: 200;
+						line-height: 30px;
+						padding: 0;
+						margin-top: 40px;
+						&:hover{
+							background-color: #21D59A;
+							color: #fff;
+							transition: all .3s;
+						}
+					}
+				}
+			}
+		}
+		.carousel-indicators {
+			.active{
+				background-color: #21D59A;
+			}
+			li{
+				border-color: #21D59A;
+				width: 15px;
+				height: 15px;
+				margin: 5px;
+			}
+		}
+	}
+}

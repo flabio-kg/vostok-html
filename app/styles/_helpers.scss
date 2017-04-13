@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoMedium/RobotoMedium.eot'),
+       url('../fonts/RobotoMedium/RobotoMedium.woff') format('woff'),
+       url('../fonts/RobotoMedium/RobotoMedium.ttf') format('truetype'),
+       url('../fonts/RobotoMedium/RobotoMedium.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoRegular/RobotoRegular.eot'),
+       url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff'),
+       url('../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype'),
+       url('../fonts/RobotoRegular/RobotoRegular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoLight/RobotoLight.eot'),
+       url('../fonts/RobotoLight/RobotoLight.woff') format('woff'),
+       url('../fonts/RobotoLight/RobotoLight.ttf') format('truetype'),
+       url('../fonts/RobotoLight/RobotoLight.eot?#iefix') format('embedded-opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/RobotoThin/RobotoThin.eot'),
+       url('../fonts/RobotoThin/RobotoThin.woff') format('woff'),
+       url('../fonts/RobotoThin/RobotoThin.ttf') format('truetype'),
+       url('../fonts/RobotoThin/RobotoThin.eot?#iefix') format('embedded-opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+.container{
+  min-width: 994px;
+}
+
+body{
+  font-family: 'Roboto';
+  background-image: url('../images/bg_main.png');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .fa-angle-double-up{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 22px;
+    color: #4D4D4D;
+    line-height: 30px;
+    padding-right: 7px;
+  }
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    @media (max-width: $screen-md-max) {
+      right: 10px;
+    }
+  }
+  #back-to-top:hover {
+    background: #e9ebec;
+  }
+  #back-to-top.show {
+    opacity: 1;
+  }
+  #content {
+    height: 2000px;
+  }
+}
+
+button.print-button {
+  width: 40px;
+  height: 40px;
+}
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+  border: solid 2px #333;
+}
+span.print-icon::after {
+  border-width: 2px;
+}
+
+button.print-button {
+  position: relative;
+  padding: 0;
+  border: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+span.print-icon {
+  position: relative;
+  display: inline-block;  
+  padding: 0;
+  margin-top: 20%;
+  width: 50%;
+  height: 30%;
+  background: #fff;
+  border-radius: 20% 20% 0 0;
+}
+
+span.print-icon::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 12%;
+  right: 12%;
+  height: 110%;
+
+  transition: height .2s .15s;
+}
+
+span.print-icon::after {
+  content: " ";
+  position: absolute;
+  top: 55%;
+  left: 12%;
+  right: 12%;
+  height: 0%;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: 70% 90%;
+  background-position: center;
+  background-image: linear-gradient(
+    to top,
+    #fff 0, #fff 14%,
+    #333 14%, #333 28%,
+    #fff 28%, #fff 42%,
+    #333 42%, #333 56%,
+    #fff 56%, #fff 70%,
+    #333 70%, #333 84%,
+    #fff 84%, #fff 100%
+  );
+
+  transition: height .2s, border-width 0s .2s, width 0s .2s;
+}
+
+button.print-button:hover {
+  cursor: pointer;
+}
+
+button.print-button:hover .print-icon::before {
+  height:0px;
+  transition: height .2s;
+}
+button.print-button:hover .print-icon::after {
+  height:120%;
+  transition: height .2s .15s, border-width 0s .16s;
+}

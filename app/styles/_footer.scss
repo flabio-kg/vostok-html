@@ -1,0 +1,125 @@
+.footer{
+	padding-top: 45px;
+	padding-bottom: 30px;
+	&__blog{
+		max-width: 100%;
+		height: 150px;
+		box-shadow: 0px 4px 7.2px 2.8px rgba(0, 0, 0, 0.41);
+		background-color: #4D4D4D;
+		border-radius: 10px;
+		padding-top: 15px;
+		padding-left: 15px;
+	}
+	&__left{
+		padding-top: 22px;
+		a{
+			img{
+				padding-bottom: 35px;
+			}
+		}
+		ul{
+			padding-left: 35px;
+			display: inline-block;
+			@media (max-width: $screen-md-max) {
+				padding-left: 20px;
+			}
+			li{
+				list-style-type: none;
+				font-size: 16px;
+				color: #fff;
+				font-weight: 200;
+				padding-top: 10px;
+				@media (max-width: $screen-md-max) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	&__mid{
+		padding-left: 40px;
+		@media (max-width: $screen-md-max) {
+			padding-left: 50px;
+		}
+		h5{
+			font-size: 20px;
+			color: #fff;
+			font-weight: 200;
+			margin: 0;
+		}
+		ul{
+			padding: 0;
+			display: inline-block;
+			li{
+				list-style-type: none;
+				padding-top: 10px;
+				a{
+					font-size: 16px;
+					color: #fff;
+					font-weight: 200;
+					&:hover{
+						text-decoration: none;
+						color: #2597ee;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+		.padding{
+			padding-left: 50px;
+			@media (max-width: $screen-md-max) {
+				padding-left: 30px;
+			}
+		}
+	}
+	&__right{
+		h5{
+			font-size: 20px;
+			color: #fff;
+			font-weight: 200;
+			margin: 0;
+		}
+		ul{
+			padding: 0;
+			display: inline-block;
+			li{
+				list-style-type: none;
+				padding-top: 8px;
+				font-size: 16px;
+				color: #fff;
+				font-weight: 200;
+				i{
+					padding-right: 10px;
+					font-size: 20px;
+					color: #fff;
+					&:hover{
+						color: #fff;
+					}
+				}
+				.fa-envelope-o{
+					font-size: 17px;
+				}
+				.fa-map-marker{
+					padding-right: 0;
+				}
+				.fa-mobile-phone{
+					padding-right: 15px;
+				}
+				a{
+					font-size: 16px;
+					color: #fff;
+					font-weight: 400;
+					padding-right: 15px;
+					@media (max-width: $screen-md-max) {
+						padding-right: 10px;
+						font-size: 14px;
+					}
+					&:hover{
+						text-decoration: none;
+						color: #2597ee;
+						transition: all .3s;
+					}
+				}
+			}
+		}
+	}
+}
